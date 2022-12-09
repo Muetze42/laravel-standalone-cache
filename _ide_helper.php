@@ -201,6 +201,7 @@ namespace Illuminate\Support\Facades {
         }
 
     }
+
     class File
     {
         /**
@@ -911,7 +912,9 @@ namespace Illuminate\Support\Facades {
         }
 
     }
-    class Storage {
+
+    class Storage
+    {
         /**
          * Get a filesystem instance.
          *
@@ -924,6 +927,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->drive($name);
         }
+
         /**
          * Get a filesystem instance.
          *
@@ -936,6 +940,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->disk($name);
         }
+
         /**
          * Get a default cloud filesystem instance.
          *
@@ -947,6 +952,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->cloud();
         }
+
         /**
          * Build an on-demand disk.
          *
@@ -959,6 +965,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->build($config);
         }
+
         /**
          * Create an instance of the local driver.
          *
@@ -971,6 +978,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->createLocalDriver($config);
         }
+
         /**
          * Create an instance of the ftp driver.
          *
@@ -983,6 +991,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->createFtpDriver($config);
         }
+
         /**
          * Create an instance of the sftp driver.
          *
@@ -995,6 +1004,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->createSftpDriver($config);
         }
+
         /**
          * Create an instance of the Amazon S3 driver.
          *
@@ -1007,6 +1017,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->createS3Driver($config);
         }
+
         /**
          * Create a scoped driver.
          *
@@ -1019,6 +1030,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->createScopedDriver($config);
         }
+
         /**
          * Set the given disk instance.
          *
@@ -1032,6 +1044,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->set($name, $disk);
         }
+
         /**
          * Get the default driver name.
          *
@@ -1043,6 +1056,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->getDefaultDriver();
         }
+
         /**
          * Get the default cloud driver name.
          *
@@ -1054,6 +1068,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->getDefaultCloudDriver();
         }
+
         /**
          * Unset the given disk instances.
          *
@@ -1066,6 +1081,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->forgetDisk($disk);
         }
+
         /**
          * Disconnect the given disk and remove from local cache.
          *
@@ -1078,6 +1094,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             $instance->purge($name);
         }
+
         /**
          * Register a custom driver creator Closure.
          *
@@ -1091,6 +1108,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->extend($driver, $callback);
         }
+
         /**
          * Set the application instance used by the manager.
          *
@@ -1103,6 +1121,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemManager $instance */
             return $instance->setApplication($app);
         }
+
         /**
          * Assert that the given file or directory exists.
          *
@@ -1116,6 +1135,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->assertExists($path, $content);
         }
+
         /**
          * Assert that the given file or directory does not exist.
          *
@@ -1128,6 +1148,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->assertMissing($path);
         }
+
         /**
          * Assert that the given directory is empty.
          *
@@ -1140,6 +1161,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->assertDirectoryEmpty($path);
         }
+
         /**
          * Determine if a file or directory exists.
          *
@@ -1152,6 +1174,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->exists($path);
         }
+
         /**
          * Determine if a file or directory is missing.
          *
@@ -1164,6 +1187,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->missing($path);
         }
+
         /**
          * Determine if a file exists.
          *
@@ -1176,6 +1200,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->fileExists($path);
         }
+
         /**
          * Determine if a file is missing.
          *
@@ -1188,6 +1213,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->fileMissing($path);
         }
+
         /**
          * Determine if a directory exists.
          *
@@ -1200,6 +1226,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->directoryExists($path);
         }
+
         /**
          * Determine if a directory is missing.
          *
@@ -1212,6 +1239,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->directoryMissing($path);
         }
+
         /**
          * Get the full path for the file at the given "short" path.
          *
@@ -1224,6 +1252,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->path($path);
         }
+
         /**
          * Get the contents of a file.
          *
@@ -1236,6 +1265,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->get($path);
         }
+
         /**
          * Create a streamed response for a given file.
          *
@@ -1251,6 +1281,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->response($path, $name, $headers, $disposition);
         }
+
         /**
          * Create a streamed download response for a given file.
          *
@@ -1264,6 +1295,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->download($path, $name, $headers);
         }
+
         /**
          * Write the contents of a file.
          *
@@ -1278,6 +1310,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->put($path, $contents, $options);
         }
+
         /**
          * Store the uploaded file on the disk.
          *
@@ -1292,6 +1325,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->putFile($path, $file, $options);
         }
+
         /**
          * Store the uploaded file on the disk with a given name.
          *
@@ -1307,6 +1341,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->putFileAs($path, $file, $name, $options);
         }
+
         /**
          * Get the visibility for the given path.
          *
@@ -1319,6 +1354,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->getVisibility($path);
         }
+
         /**
          * Set the visibility for the given path.
          *
@@ -1332,6 +1368,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->setVisibility($path, $visibility);
         }
+
         /**
          * Prepend to a file.
          *
@@ -1347,6 +1384,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->prepend($path, $data, $separator);
         }
+
         /**
          * Append to a file.
          *
@@ -1362,6 +1400,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->append($path, $data, $separator);
         }
+
         /**
          * Delete the file at a given path.
          *
@@ -1374,6 +1413,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->delete($paths);
         }
+
         /**
          * Copy a file to a new location.
          *
@@ -1387,6 +1427,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->copy($from, $to);
         }
+
         /**
          * Move a file to a new location.
          *
@@ -1400,6 +1441,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->move($from, $to);
         }
+
         /**
          * Get the file size of a given file.
          *
@@ -1412,18 +1454,20 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->size($path);
         }
+
         /**
          * Get the checksum for a file.
          *
-         * @return string|false
          * @throws UnableToProvideChecksum
          * @static
+         * @return string|false
          */
         public static function checksum($path, $options = [])
         {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->checksum($path, $options);
         }
+
         /**
          * Get the mime-type of a given file.
          *
@@ -1436,6 +1480,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->mimeType($path);
         }
+
         /**
          * Get the file's last modification time.
          *
@@ -1448,6 +1493,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->lastModified($path);
         }
+
         /**
          * Get a resource to read the file.
          *
@@ -1460,6 +1506,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->readStream($path);
         }
+
         /**
          * Write a new file using a stream.
          *
@@ -1474,19 +1521,21 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->writeStream($path, $resource, $options);
         }
+
         /**
          * Get the URL for the file at the given path.
          *
          * @param string $path
-         * @return string
          * @throws \RuntimeException
          * @static
+         * @return string
          */
         public static function url($path)
         {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->url($path);
         }
+
         /**
          * Determine if temporary URLs can be generated.
          *
@@ -1498,21 +1547,23 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->providesTemporaryUrls();
         }
+
         /**
          * Get a temporary URL for the file at the given path.
          *
          * @param string $path
          * @param \DateTimeInterface $expiration
          * @param array $options
-         * @return string
          * @throws \RuntimeException
          * @static
+         * @return string
          */
         public static function temporaryUrl($path, $expiration, $options = [])
         {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->temporaryUrl($path, $expiration, $options);
         }
+
         /**
          * Get an array of all files in a directory.
          *
@@ -1526,6 +1577,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->files($directory, $recursive);
         }
+
         /**
          * Get all of the files from the given directory (recursive).
          *
@@ -1538,6 +1590,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->allFiles($directory);
         }
+
         /**
          * Get all of the directories within a given directory.
          *
@@ -1551,6 +1604,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->directories($directory, $recursive);
         }
+
         /**
          * Get all the directories within a given directory (recursive).
          *
@@ -1563,6 +1617,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->allDirectories($directory);
         }
+
         /**
          * Create a directory.
          *
@@ -1575,6 +1630,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->makeDirectory($path);
         }
+
         /**
          * Recursively delete a directory.
          *
@@ -1587,6 +1643,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->deleteDirectory($directory);
         }
+
         /**
          * Get the Flysystem driver.
          *
@@ -1598,6 +1655,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->getDriver();
         }
+
         /**
          * Get the Flysystem adapter.
          *
@@ -1609,6 +1667,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->getAdapter();
         }
+
         /**
          * Get the configuration values.
          *
@@ -1620,6 +1679,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->getConfig();
         }
+
         /**
          * Define a custom temporary URL builder callback.
          *
@@ -1632,6 +1692,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             $instance->buildTemporaryUrlsUsing($callback);
         }
+
         /**
          * Apply the callback if the given "value" is (or resolves to) truthy.
          *
@@ -1648,6 +1709,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->when($value, $callback, $default);
         }
+
         /**
          * Apply the callback if the given "value" is (or resolves to) falsy.
          *
@@ -1664,6 +1726,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
             return $instance->unless($value, $callback, $default);
         }
+
         /**
          * Register a custom macro.
          *
@@ -1676,19 +1739,21 @@ namespace Illuminate\Support\Facades {
         {
             \Illuminate\Filesystem\FilesystemAdapter::macro($name, $macro);
         }
+
         /**
          * Mix another object into the class.
          *
          * @param object $mixin
          * @param bool $replace
-         * @return void
          * @throws \ReflectionException
          * @static
+         * @return void
          */
         public static function mixin($mixin, $replace = true)
         {
             \Illuminate\Filesystem\FilesystemAdapter::mixin($mixin, $replace);
         }
+
         /**
          * Checks if macro is registered.
          *
@@ -1700,6 +1765,7 @@ namespace Illuminate\Support\Facades {
         {
             return \Illuminate\Filesystem\FilesystemAdapter::hasMacro($name);
         }
+
         /**
          * Flush the existing macros.
          *
@@ -1710,14 +1776,15 @@ namespace Illuminate\Support\Facades {
         {
             \Illuminate\Filesystem\FilesystemAdapter::flushMacros();
         }
+
         /**
          * Dynamically handle calls to the class.
          *
          * @param string $method
          * @param array $parameters
-         * @return mixed
          * @throws \BadMethodCallException
          * @static
+         * @return mixed
          */
         public static function macroCall($method, $parameters)
         {
@@ -1726,7 +1793,9 @@ namespace Illuminate\Support\Facades {
         }
 
     }
-    class Cache {
+
+    class Cache
+    {
         /**
          * Get a cache store instance by name, wrapped in a repository.
          *
@@ -1739,6 +1808,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             return $instance->store($name);
         }
+
         /**
          * Get a cache driver instance.
          *
@@ -1751,6 +1821,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             return $instance->driver($driver);
         }
+
         /**
          * Create a new cache repository with the given implementation.
          *
@@ -1763,6 +1834,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             return $instance->repository($store);
         }
+
         /**
          * Re-set the event dispatcher on all resolved cache repositories.
          *
@@ -1774,6 +1846,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             $instance->refreshEventDispatcher();
         }
+
         /**
          * Get the default cache driver name.
          *
@@ -1785,6 +1858,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             return $instance->getDefaultDriver();
         }
+
         /**
          * Set the default cache driver name.
          *
@@ -1797,6 +1871,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             $instance->setDefaultDriver($name);
         }
+
         /**
          * Unset the given driver instances.
          *
@@ -1809,6 +1884,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             return $instance->forgetDriver($name);
         }
+
         /**
          * Disconnect the given driver and remove from local cache.
          *
@@ -1821,6 +1897,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             $instance->purge($name);
         }
+
         /**
          * Register a custom driver creator Closure.
          *
@@ -1834,6 +1911,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\CacheManager $instance */
             return $instance->extend($driver, $callback);
         }
+
         /**
          * Determine if an item exists in the cache.
          *
@@ -1846,6 +1924,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->has($key);
         }
+
         /**
          * Determine if an item doesn't exist in the cache.
          *
@@ -1858,6 +1937,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->missing($key);
         }
+
         /**
          * Retrieve an item from the cache by key.
          *
@@ -1871,9 +1951,9 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->get($key, $default);
         }
+
         /**
          * Retrieve multiple items from the cache by key.
-         *
          * Items not found in the cache will have a null value.
          *
          * @param array $keys
@@ -1885,23 +1965,25 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->many($keys);
         }
+
         /**
          * Obtains multiple cache items by their unique keys.
          *
-         * @return \Illuminate\Cache\iterable
          * @param \Psr\SimpleCache\iterable<string> $keys A list of keys that can be obtained in a single operation.
          * @param mixed $default Default value to return for keys that do not exist.
-         * @return \Psr\SimpleCache\iterable<string, mixed> A list of key => value pairs. Cache keys that do not exist or are stale will have $default as value.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if $keys is neither an array nor a Traversable,
          *   or if any of the $keys are not a legal value.
          * @static
+         * @return \Psr\SimpleCache\iterable<string, mixed> A list of key => value pairs. Cache keys that do not exist or are stale will have $default as value.
+         * @return \Illuminate\Cache\iterable
          */
         public static function getMultiple($keys, $default = null)
         {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->getMultiple($keys, $default);
         }
+
         /**
          * Retrieve an item from the cache and delete it.
          *
@@ -1915,6 +1997,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->pull($key, $default);
         }
+
         /**
          * Store an item in the cache.
          *
@@ -1929,25 +2012,27 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->put($key, $value, $ttl);
         }
+
         /**
          * Persists data in the cache, uniquely referenced by a key with an optional expiration TTL time.
          *
-         * @return bool
          * @param string $key The key of the item to store.
          * @param mixed $value The value of the item to store, must be serializable.
          * @param null|int|\DateInterval $ttl Optional. The TTL value of this item. If no value is sent and
          *                                      the driver supports TTL then the library may set a default value
          *                                      for it or let the driver take care of that.
-         * @return bool True on success and false on failure.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if the $key string is not a legal value.
          * @static
+         * @return bool True on success and false on failure.
+         * @return bool
          */
         public static function set($key, $value, $ttl = null)
         {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->set($key, $value, $ttl);
         }
+
         /**
          * Store multiple items in the cache for a given number of seconds.
          *
@@ -1961,25 +2046,27 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->putMany($values, $ttl);
         }
+
         /**
          * Persists a set of key => value pairs in the cache, with an optional TTL.
          *
-         * @return bool
          * @param \Psr\SimpleCache\iterable $values A list of key => value pairs for a multiple-set operation.
          * @param null|int|\DateInterval $ttl Optional. The TTL value of this item. If no value is sent and
          *                                       the driver supports TTL then the library may set a default value
          *                                       for it or let the driver take care of that.
-         * @return bool True on success and false on failure.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if $values is neither an array nor a Traversable,
          *   or if any of the $values are not a legal value.
          * @static
+         * @return bool True on success and false on failure.
+         * @return bool
          */
         public static function setMultiple($values, $ttl = null)
         {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->setMultiple($values, $ttl);
         }
+
         /**
          * Store an item in the cache if the key does not exist.
          *
@@ -1994,6 +2081,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->add($key, $value, $ttl);
         }
+
         /**
          * Increment the value of an item in the cache.
          *
@@ -2007,6 +2095,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->increment($key, $value);
         }
+
         /**
          * Decrement the value of an item in the cache.
          *
@@ -2020,6 +2109,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->decrement($key, $value);
         }
+
         /**
          * Store an item in the cache indefinitely.
          *
@@ -2033,6 +2123,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->forever($key, $value);
         }
+
         /**
          * Get an item from the cache, or execute the given Closure and store the result.
          *
@@ -2047,6 +2138,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->remember($key, $ttl, $callback);
         }
+
         /**
          * Get an item from the cache, or execute the given Closure and store the result forever.
          *
@@ -2060,6 +2152,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->sear($key, $callback);
         }
+
         /**
          * Get an item from the cache, or execute the given Closure and store the result forever.
          *
@@ -2073,6 +2166,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->rememberForever($key, $callback);
         }
+
         /**
          * Remove an item from the cache.
          *
@@ -2085,37 +2179,40 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->forget($key);
         }
+
         /**
          * Delete an item from the cache by its unique key.
          *
-         * @return bool
          * @param string $key The unique cache key of the item to delete.
-         * @return bool True if the item was successfully removed. False if there was an error.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if the $key string is not a legal value.
          * @static
+         * @return bool True if the item was successfully removed. False if there was an error.
+         * @return bool
          */
         public static function delete($key)
         {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->delete($key);
         }
+
         /**
          * Deletes multiple cache items in a single operation.
          *
-         * @return bool
          * @param \Psr\SimpleCache\iterable<string> $keys A list of string-based keys to be deleted.
-         * @return bool True if the items were successfully removed. False if there was an error.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if $keys is neither an array nor a Traversable,
          *   or if any of the $keys are not a legal value.
          * @static
+         * @return bool True if the items were successfully removed. False if there was an error.
+         * @return bool
          */
         public static function deleteMultiple($keys)
         {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->deleteMultiple($keys);
         }
+
         /**
          * Wipes clean the entire cache's keys.
          *
@@ -2128,19 +2225,21 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->clear();
         }
+
         /**
          * Begin executing a new tags operation if the store supports it.
          *
          * @param array|mixed $names
-         * @return \Illuminate\Cache\TaggedCache
          * @throws \BadMethodCallException
          * @static
+         * @return \Illuminate\Cache\TaggedCache
          */
         public static function tags($names)
         {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->tags($names);
         }
+
         /**
          * Determine if the current store supports tags.
          *
@@ -2152,6 +2251,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->supportsTags();
         }
+
         /**
          * Get the default cache time.
          *
@@ -2163,6 +2263,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->getDefaultCacheTime();
         }
+
         /**
          * Set the default cache time in seconds.
          *
@@ -2175,6 +2276,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->setDefaultCacheTime($seconds);
         }
+
         /**
          * Get the cache store implementation.
          *
@@ -2186,6 +2288,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->getStore();
         }
+
         /**
          * Get the event dispatcher instance.
          *
@@ -2197,6 +2300,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->getEventDispatcher();
         }
+
         /**
          * Set the event dispatcher instance.
          *
@@ -2209,6 +2313,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             $instance->setEventDispatcher($events);
         }
+
         /**
          * Determine if a cached value exists.
          *
@@ -2221,6 +2326,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->offsetExists($key);
         }
+
         /**
          * Retrieve an item from the cache by key.
          *
@@ -2233,6 +2339,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->offsetGet($key);
         }
+
         /**
          * Store an item in the cache for the default time.
          *
@@ -2246,6 +2353,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             $instance->offsetSet($key, $value);
         }
+
         /**
          * Remove an item from the cache.
          *
@@ -2258,6 +2366,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\Repository $instance */
             $instance->offsetUnset($key);
         }
+
         /**
          * Register a custom macro.
          *
@@ -2270,19 +2379,21 @@ namespace Illuminate\Support\Facades {
         {
             \Illuminate\Cache\Repository::macro($name, $macro);
         }
+
         /**
          * Mix another object into the class.
          *
          * @param object $mixin
          * @param bool $replace
-         * @return void
          * @throws \ReflectionException
          * @static
+         * @return void
          */
         public static function mixin($mixin, $replace = true)
         {
             \Illuminate\Cache\Repository::mixin($mixin, $replace);
         }
+
         /**
          * Checks if macro is registered.
          *
@@ -2294,6 +2405,7 @@ namespace Illuminate\Support\Facades {
         {
             return \Illuminate\Cache\Repository::hasMacro($name);
         }
+
         /**
          * Flush the existing macros.
          *
@@ -2304,20 +2416,22 @@ namespace Illuminate\Support\Facades {
         {
             \Illuminate\Cache\Repository::flushMacros();
         }
+
         /**
          * Dynamically handle calls to the class.
          *
          * @param string $method
          * @param array $parameters
-         * @return mixed
          * @throws \BadMethodCallException
          * @static
+         * @return mixed
          */
         public static function macroCall($method, $parameters)
         {
             /** @var \Illuminate\Cache\Repository $instance */
             return $instance->macroCall($method, $parameters);
         }
+
         /**
          * Remove all items from the cache.
          *
@@ -2329,6 +2443,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\FileStore $instance */
             return $instance->flush();
         }
+
         /**
          * Get the Filesystem instance.
          *
@@ -2340,6 +2455,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\FileStore $instance */
             return $instance->getFilesystem();
         }
+
         /**
          * Get the working directory of the cache.
          *
@@ -2351,6 +2467,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\FileStore $instance */
             return $instance->getDirectory();
         }
+
         /**
          * Get the cache key prefix.
          *
@@ -2362,6 +2479,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\FileStore $instance */
             return $instance->getPrefix();
         }
+
         /**
          * Get a lock instance.
          *
@@ -2376,6 +2494,7 @@ namespace Illuminate\Support\Facades {
             /** @var \Illuminate\Cache\FileStore $instance */
             return $instance->lock($name, $seconds, $owner);
         }
+
         /**
          * Restore a lock instance using the owner identifier.
          *
@@ -2393,9 +2512,35 @@ namespace Illuminate\Support\Facades {
     }
 }
 
+namespace Illuminate\Support {
+    class Collection
+    {
+        /**
+         * @see \Laravel\Nova\NovaServiceProvider::registerCollectionMacros()
+         * @static
+         */
+        public static function isAssoc()
+        {
+            return \Illuminate\Support\Collection::isAssoc();
+        }
+
+    }
+}
+
 namespace {
-    class Config extends \Illuminate\Support\Facades\Config{}
-    class File extends \Illuminate\Support\Facades\File{}
-    class Storage extends \Illuminate\Support\Facades\Storage {}
-    class Cache extends \Illuminate\Support\Facades\Cache {}
+    class Config extends \Illuminate\Support\Facades\Config
+    {
+    }
+
+    class File extends \Illuminate\Support\Facades\File
+    {
+    }
+
+    class Storage extends \Illuminate\Support\Facades\Storage
+    {
+    }
+
+    class Cache extends \Illuminate\Support\Facades\Cache
+    {
+    }
 }
