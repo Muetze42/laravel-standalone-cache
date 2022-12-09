@@ -1,0 +1,7 @@
+{
+    "require": {
+        "illuminate/filesystem": "^9.43",
+        "illuminate/cache": "^9.43",
+        "illuminate/container": "^9.43"
+    }
+}
