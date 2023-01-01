@@ -1,5 +1,6 @@
 {
     "require": {
+        "php": "^8.0",
         "illuminate/filesystem": "^9.43",
         "illuminate/cache": "^9.43",
         "illuminate/container": "^9.43"
